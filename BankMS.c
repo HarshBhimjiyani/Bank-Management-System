@@ -218,7 +218,6 @@ void account(void)
     // Closing file
     fclose(fp);
 
-    // Calling another function after successful creation of account
     accountcreated();
 }
 
@@ -317,7 +316,6 @@ void login(void)
     printf("\n\nIncorrect account number or password. Press enter to try again.");
     getch();
 
-    // Closing the file
     fclose(fp);
 }
 
