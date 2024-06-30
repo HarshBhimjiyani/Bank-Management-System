@@ -207,7 +207,9 @@ void account(void)
         else
             break;
     }
-    password[i] = '\0'; // Ensure the password string is null-terminated
+
+    // Ensure the password string is null-terminated
+    password[i] = '\0';
     strcpy(u1.password, password);
 
     u1.balance = 0.0;
@@ -298,7 +300,9 @@ void login(void)
         else
             break;
     }
-    password[i] = '\0'; // Ensure the password string is null-terminated
+
+    // Ensure the password string is null-terminated
+    password[i] = '\0'; 
 
     // Checking if account number exists in the file or not
     while (fread(&u1, sizeof(u1), 1, fp))
@@ -308,7 +312,7 @@ void login(void)
             fclose(fp);
             loginsu();
             display(accountNumber);
-            return; // Exit the function after successful login
+            return;
         }
     }
 
