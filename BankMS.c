@@ -700,13 +700,11 @@ void depositMoney(int accountNumber)
         }
         else
         {
-            // Display error message if the deposit amount is invalid
             printf("Error: Invalid deposit amount.\n");
         }
     }
     else
     {
-        // Display error message if the user is not found
         printf("Error: User not found.\n");
     }
 
@@ -892,13 +890,13 @@ int adminLogin(void)
     // Check if entered credentials match admin credentials
     if (strcmp(enteredUsername, adminUsername) == 0 && strcmp(enteredPassword, adminPassword) == 0)
     {
-        return 1; // Return 1 to indicate successful login
+        return 1;
     }
     else
     {
         printf("\n\nIncorrect username or password. Press enter to go back to the main menu.");
         getch();
-        return 0; // Return 0 to indicate unsuccessful login
+        return 0;
     }
 }
 
@@ -953,7 +951,6 @@ void adminMenu(void)
             break;
 
         case 5:
-            // Logout logic
             printf("\nLogging out...");
             getch();
             break;
